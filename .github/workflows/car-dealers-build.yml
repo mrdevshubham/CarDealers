@@ -23,3 +23,15 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+  
+  trigger-workflow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: mrdevshubham
+          repo: DependentDealers
+          github_token: ${{ secrets.G_ACCESS_TOKEN }}
+          workflow_file_name: dependent-dealers-buildyml
