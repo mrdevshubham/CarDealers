@@ -34,4 +34,4 @@ jobs:
           owner: mrdevshubham
           repo: DependentDealers
           github_token: ${{ secrets.G_ACCESS_TOKEN }}
-          workflow_file_name: dependent-dealers-buildyml
+          workflow_file_name: dependent-dealers-build.yml
