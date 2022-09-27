@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -27,7 +27,7 @@ jobs:
   trigger-workflow:
     name: Trigger the external workflow
     needs: build
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
